@@ -47,9 +47,9 @@ node default {
     ensure =>file,
     path => '/etc/motd',
     }
-  exec { 'gen motd':
-  command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
-  unless => 'grep -F "Welcome to"  /etc/motd',
-  }
+  #exec { 'gen motd':
+  #command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+  #unless => 'grep -F "Welcome to"  /etc/motd',
+  #}
   
 }
