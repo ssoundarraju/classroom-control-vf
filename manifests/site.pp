@@ -49,7 +49,7 @@ node default {
     }
   exec { 'gen motd':
   command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
-  unless => 'grep -F "Welcome to ' /etc/motd',
+  unless => 'grep -F "Welcome to"  /etc/motd',
   }
   
 }
