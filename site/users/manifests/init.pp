@@ -1,0 +1,3 @@
+user { 'Sri':
+ensure => present,
+}
