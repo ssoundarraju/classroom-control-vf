@@ -41,6 +41,12 @@ ini_setting { 'random ordering':
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
-    class { 'Puppet training': }
+  #class { 'Puppet training': }
   notify { "Hello, this is ${::hostname}": }
+  file { 'myfirstresource':
+    ensure =>exists,
+    path => '/etc/motd',
+    content => 'this is my first resource addition',
+    }
+  
 }
