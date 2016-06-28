@@ -43,8 +43,8 @@ node default {
   # Example:
   #class { 'Puppet training': }
   notify { "Hello, this is ${::hostname}": }
-  file { 'myfirstresource':
-    ensure =>exists,
+  file { 'motd':
+    ensure =>file,
     path => '/etc/motd',
     }
   
