@@ -46,7 +46,7 @@ node default {
   file { 'myfirstresource':
     ensure =>exists,
     path => '/etc/motd',
-    content => 'this is my first resource addition',
+    content => 'this is my first resource addition'
     }
   
 }
