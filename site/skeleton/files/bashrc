@@ -4,3 +4,5 @@ fi
 
 set -o vi
 set editing-mode vi
+
+cowsay "Hi there jaji"
