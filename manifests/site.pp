@@ -41,7 +41,7 @@ ini_setting { 'random ordering':
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
-  include users
+  #include users
   include skeleton
   notify { "Hello, this is ${::hostname}": }
   #file { 'motd':
