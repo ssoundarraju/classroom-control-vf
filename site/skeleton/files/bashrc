@@ -1,0 +1,6 @@
+if [-f /etc/bashrc];then
+   ./etc/bashrc
+fi
+
+set -o vi
+set editing-mode vi
