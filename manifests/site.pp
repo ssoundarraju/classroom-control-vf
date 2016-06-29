@@ -48,7 +48,7 @@ node default {
    # path => '/etc/motd',
   #  }
   exec { 'gen motd':
-  command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+  command => "/usr/local/bin/cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
   unless => '/bin/grep -F "Welcome to"  /etc/motd',
   }
   
