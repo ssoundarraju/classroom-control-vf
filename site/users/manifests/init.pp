@@ -1,5 +1,5 @@
-class {'users':
-user { 'Sri':
-ensure => present,
-}
+class users {
+ user { 'Sri':
+ ensure => present,
+ }
 }
