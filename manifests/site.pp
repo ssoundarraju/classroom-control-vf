@@ -41,15 +41,15 @@ ini_setting { 'random ordering':
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
-  class { 'users': }
+  #class { 'users': }
   notify { "Hello, this is ${::hostname}": }
-  file { 'motd':
-    ensure =>file,
-    path => '/etc/motd',
-    }
-  #exec { 'gen motd':
-  #command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
-  #unless => 'grep -F "Welcome to"  /etc/motd',
-  #}
+  #file { 'motd':
+   # ensure =>file,
+   # path => '/etc/motd',
+  #  }
+  exec { 'gen motd':
+  command => "cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
+  unless => 'grep -F "Welcome to"  /etc/motd',
+  }
   
 }
