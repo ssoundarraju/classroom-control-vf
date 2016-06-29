@@ -51,5 +51,9 @@ node default {
   command => "/usr/local/bin/cowsay 'Welcome to ${::fqdn}!' > /etc/motd",
   unless => '/bin/grep -F "Welcome to"  /etc/motd',
   }
+  host { 'testing.puppetlabs.vm':
+  ensure => 'present',
+  ip => '127.0.0.1',
+  }
   
 }
